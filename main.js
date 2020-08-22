@@ -78,10 +78,10 @@ async function operateServo() {
     if (-11 <= weight && weight <= -8) {
       angle = 20;
       await pca9685.setServo(0, angle);
-      await sleep(300);
+      await sleep(200);
       angle = 30;
       await pca9685.setServo(0, angle);
-      await sleep(0);
+      await sleep(150);
       await pca9685.setServo(0, default_angle);
     } else {
       angle = default_angle;
