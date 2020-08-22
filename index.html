@@ -6,12 +6,17 @@
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1"
     />
-    <title>i2c-PCA9685</title>
+    <title>Coke server</title>
     <script
       type="text/javascript"
       src="https://chirimen.org/chirimen-micro-bit/polyfill/microBitBLE.js"
     ></script>
     <script src="https://chirimen.org/chirimen/gc/i2c/i2c-PCA9685/node_modules/@chirimen-raspi/chirimen-driver-i2c-pca9685/PCA9685.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@chirimen/ads1x15"
+    ></script>
+
     <script src="./main.js" defer></script>
     <style>
       p {
@@ -32,10 +37,30 @@
     <form name="js">
       <input type="button" value="Connect" onclick="connect();" />
       <input type="button" value="Disconnect" onclick="disconnect();" />
+
+      <input type="button" value="Servo +" onclick="ServoPlus();" />
+      <input type="button" value="Servo -" onclick="ServoMinus();" />
     </form>
     <hr />
-    <h3>Servo Control viw I2C PCA9685</h3>
+    <h3></h3>
     <p id="head">TEST</p>
-    <img src="imgs/pinbit_pca9685.png" height="600px" />
+    <div id="msg1">---</div>
+    <div id="msg2">---</div>
+    <table>
+      <tr>
+        <td>
+          <span id="rawData0">init</span>
+          <br />
+          <span id="voltage0">init</span>
+        </td>
+        <td>
+          <span id="rawData1">init</span>
+          <br />
+          <span id="voltage1">init</span>
+        </td>
+      </tr>
+      <tr></tr>
+    </table>
+    <span id="Weight">init</span>
   </body>
 </html>
