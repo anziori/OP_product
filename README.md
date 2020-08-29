@@ -1,2 +1,5 @@
 # OP_product
-Created with CodeSandbox
+
+This software is released under the MIT License, see LICENSE.txt.
+
+# 自動給水機
